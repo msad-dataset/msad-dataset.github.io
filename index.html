@@ -91,6 +91,31 @@
             -moz-tab-size: 4;
             -o-tab-size: 4;
         }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 5px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .box h2 {
+            font-size: 18px;
+            margin: 0 0 5px;
+            text-align: center;
+        }
+        .box p {
+            font-size: 16px;
+            margin: 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +126,7 @@
             <tr>
                 <td align="center" width="100px">
                     <center>
-                        <span style="font-size:24px"><a href="#">Liyun Zhu</a><sup>1</sup></span>
+                        <span style="font-size:24px"><a href="https://au.linkedin.com/in/liyun-zhu-b8755328b">Liyun Zhu</a><sup>1</sup></span>
                     </center>
                 </td>
                 <td align="center" width="100px">
@@ -185,13 +210,13 @@
             </td>
             <td width="300px">
                 <center>
-                    <a href="#download"><img class="rounded" onmouseover="this.src='./resources/images/data_icon.png';" onmouseout="this.src='./resources/images/data_icon.png';" src="./resources/images/data_icon.png" height="120px"></a><br>
+                    <a href="https://forms.microsoft.com/r/sGD0am1DKr"><img class="rounded" onmouseover="this.src='./resources/images/data_icon.png';" onmouseout="this.src='./resources/images/data_icon.png';" src="./resources/images/data_icon.png" height="120px"></a><br>
                     <span style="font-size:16px">MSAD Dataset</span><br>
                 </center>
             </td>
             <td width="300px">
                 <center>
-                    <a href="https://github.com/MSAD"><img class="rounded" onmouseover="this.src='./resources/images/code_icon.png';" onmouseout="this.src='./resources/images/code_icon.png';" src="./resources/images/code_icon.png" height="120px"></a><br>
+                    <a href="#"><img class="rounded" onmouseover="this.src='./resources/images/code_icon.png';" onmouseout="this.src='./resources/images/code_icon.png';" src="./resources/images/code_icon.png" height="120px"></a><br>
                     <span style="font-size:16px">Code (Coming soon)</span><br>
                 </center>
             </td>
@@ -200,317 +225,346 @@
     <br><br>
     <hr>
     <table align="center" width="720px">
-        <center><h1>Abstract</h1></center>
+        <center><h1>Dataset Abstract</h1></center>
     </table>
     <center>
         <span>
-            &nbsp;&nbsp;In this paper, we present the Multi-Scenario Anomaly Detection (MSAD) dataset, designed to address the lack of comprehensive datasets with diverse scenarios in Video Anomaly Detection (VAD). MSAD includes 14 distinct scenarios captured from various camera views, featuring diverse motion patterns and challenging variations, such as different lighting and weather conditions. Our dataset provides a robust foundation for training superior models, with 720 videos (447,236 frames in total), an average video length of 621.16 frames, and scenarios including roads, malls, parks, and more. We also introduce evaluation protocols to ensure fair comparisons between different algorithms.
-        </span>
+            We introduce a new dataset, Multi-Scenario Anomaly Detection (MSAD), comprising 14 distinct scenarios captured from various camera views. Our dataset has diverse motion patterns and challenging variations, such as different lighting and weather conditions, providing a robust foundation for training superior models. We conduct an in-depth analysis of recent representative models using MSAD and highlight its potential in addressing the challenges of detecting anomalies across diverse and evolving surveillance scenarios.</span>
     </center>
     <br><br>
     <hr>
-    <table align="center" width="720px">
-        <center><h1>Dataset Overview</h1></center>
-        <tr>
-            <td width="400px">
-                <center>
-                    <img class="rounded" src="./resources/images/method.drawio.png" width="800px"><br>
-                </center>
-            </td>
-        </tr>
-        <tr>
-            <td width="400px">
-                <center>
-                    <span style="font-size:14px"><i>(left) An overview of the structure and form of MSAD dataset. (middle) The interaction principle of our anomaly detection methodology. (right) Examples of diverse scenarios and variations included in the dataset.</i></span>
-                </center>
-            </td>
-        </tr>
-    </table>
-    <br><br>
-    <hr>
-    <table align="center" width="720px">
-        <center><h1>Scenarios and Anomalies</h1></center>
-        <tr>
-            <td>
-                <p>
-                    The MSAD dataset covers a wide range of scenarios to provide comprehensive coverage for anomaly detection tasks. These scenarios include:
-                </p>
-                <ul>
-                    <li>Roads</li>
-                    <li>Malls</li>
-                    <li>Parks</li>
-                    <li>Sidewalks</li>
-                    <li>Offices</li>
-                    <li>Parking lots</li>
-                    <li>Pedestrian streets</li>
-                    <li>Restaurants</li>
-                    <li>Shops</li>
-                    <li>Overhead street views</li>
-                    <li>Trains</li>
-                    <li>Warehouses</li>
-                </ul>
-                <p>
-                    Within these scenarios, the dataset includes various types of anomalies to challenge and improve detection algorithms. The anomalies are categorized as follows:
-                </p>
-                <ul>
-                    <li>Human-related: people falling down, school fights, street fights, facility vandalism, shop robberies.</li>
-                    <li>Non-human-related: water leaks, floods, factory fires, trees falling down, office fires.</li>
-                </ul>
-                <p>
-                    This diverse set of scenarios and anomalies ensures that the MSAD dataset provides a robust and comprehensive foundation for developing and evaluating video anomaly detection models. The dataset includes a total of 720 videos, comprising 447,236 frames, with an average video length of 621.16 frames. Some videos extend up to 6,026 frames, providing long-term context for anomaly detection.
-                </p>
-            </td>
-        </tr>
-    </table>
-    <br><br>
 
-    <table align="center" width="100%" border="1" cellpadding="5">
-        <caption>Details of our MSAD dataset. Our dataset has a broad range of both human-related and non-human-related anomalies, spanning multiple domains.</caption>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Main Anomaly Types</th>
-                <th>Detailed Anomaly Types</th>
-                <th>Domain</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="35">Human-related</td>
-                <td rowspan="3">Assault</td>
-                <td>Assault on street</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Assault in office</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Other assault</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td rowspan="6">Fighting</td>
-                <td>Fighting on street</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td>Fighting in a restaurant</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td>Fighting in a shop</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td>Fighting in front of a door</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td>Fighting indoors</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td>Other fighting</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td rowspan="5">People Falling</td>
-                <td>People falling to ground</td>
-                <td>Pedestrian</td>
-            </tr>
-            <tr>
-                <td>People falling into pool</td>
-                <td>Pedestrian</td>
-            </tr>
-            <tr>
-                <td>People falling from high places</td>
-                <td>Pedestrian</td>
-            </tr>
-            <tr>
-                <td>People falling into subway</td>
-                <td>Pedestrian</td>
-            </tr>
-            <tr>
-                <td>Other people falling</td>
-                <td>Pedestrian</td>
-            </tr>
-            <tr>
-                <td rowspan="5">Robbery</td>
-                <td>Shop robbery</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Office robbery</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Theft</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Car theft</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Other robbery</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td rowspan="4">Shooting</td>
-                <td>Shooting on the road</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Shooting indoors</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Holding a gun</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td>Other shooting</td>
-                <td>Crime</td>
-            </tr>
-            <tr>
-                <td rowspan="9">Traffic Accident</td>
-                <td>Car falling</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Car crash</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Speeding</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Car rushing into building</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Car crash with people</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Car crash with object</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Car crash with train</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Motorcycle crash</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td>Other traffic accident</td>
-                <td>Traffic</td>
-            </tr>
-            <tr>
-                <td rowspan="3">Vandalism</td>
-                <td>Vandalizing glass</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td>Vandalizing door</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td>Other vandalism</td>
-                <td>Violence</td>
-            </tr>
-            <tr>
-                <td rowspan="20">Non-human-related</td>
-                <td rowspan="5">Explosion</td>
-                <td>Street explosion</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Firework explosion</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Factory explosion</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Indoor explosion</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Other explosion</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td rowspan="5">Fire</td>
-                <td>Smoke</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Factory fire</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Building on fire</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Bush fire</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Other fire</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td rowspan="6">Object Falling</td>
-                <td>Strong wind</td>
-                <td>Natural hazard</td>
-            </tr>
-            <tr>
-                <td>Object falling in home</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Tree falling</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Large objects falling</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Glass falling</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Other objects falling</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td rowspan="4">Water Incident</td>
-                <td>Flood</td>
-                <td>Natural hazard</td>
-            </tr>
-            <tr>
-                <td>Water leakage</td>
-                <td>Emergency</td>
-            </tr>
-            <tr>
-                <td>Heavy rain</td>
-                <td>Natural hazard</td>
-            </tr>
-            <tr>
-                <td>Other water incidents</td>
-                <td>Emergency</td>
-            </tr>
-        </tbody>
-    </table>
+    <center><h1>Dataset Overview</h1></center>
+
+    <div class="container">
+        <div class="box">
+            <h2><b>Total Videos</b></h2>
+            <p>720</p>
+        </div>
+        <div class="box">
+            <h2><b>Domain</b></h2>
+            <p>Multiple</p>
+        </div>
+        <div class="box">
+            <h2><b>#HRA</b></h2>
+            <p>35</p>
+        </div>
+        <div class="box">
+            <h2><b>#NHRA</b></h2>
+            <p>20</p>
+        </div>
+        <div class="box">
+            <h2><b>#Scenarios</b></h2>
+            <p>14</p>
+        </div>
+        <div class="box">
+            <h2><b>#View</b></h2>
+            <p>∼500</p>
+        </div>
+        <div class="box">
+            <h2><b>Modality</b></h2>
+            <p>RGB</p>
+        </div>
+        <div class="box">
+            <h2><b>Resolution</b></h2>
+            <p>Multiple</p>
+        </div>
+    </div>
+
+    <br>
+    <br>
     
+    <details>
+        <summary><b>Click</b> to view extended details of our MSAD dataset. Our dataset has a broad range of both human-related and non-human-related anomalies, spanning multiple domains.</summary>
+        
+        <table align="center" width="100%" border="1" cellpadding="5">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Main Anomaly Types</th>
+                    <th>Detailed Anomaly Types</th>
+                    <th>Domain</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="35">Human-related</td>
+                    <td rowspan="3">Assault</td>
+                    <td>Assault on street</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Assault in office</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Other assault</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td rowspan="6">Fighting</td>
+                    <td>Fighting on street</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td>Fighting in a restaurant</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td>Fighting in a shop</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td>Fighting in front of a door</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td>Fighting indoors</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td>Other fighting</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">People Falling</td>
+                    <td>People falling to ground</td>
+                    <td>Pedestrian</td>
+                </tr>
+                <tr>
+                    <td>People falling into pool</td>
+                    <td>Pedestrian</td>
+                </tr>
+                <tr>
+                    <td>People falling from high places</td>
+                    <td>Pedestrian</td>
+                </tr>
+                <tr>
+                    <td>People falling into subway</td>
+                    <td>Pedestrian</td>
+                </tr>
+                <tr>
+                    <td>Other people falling</td>
+                    <td>Pedestrian</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Robbery</td>
+                    <td>Shop robbery</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Office robbery</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Theft</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Car theft</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Other robbery</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Shooting</td>
+                    <td>Shooting on the road</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Shooting indoors</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Holding a gun</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td>Other shooting</td>
+                    <td>Crime</td>
+                </tr>
+                <tr>
+                    <td rowspan="9">Traffic Accident</td>
+                    <td>Car falling</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Car crash</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Speeding</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Car rushing into building</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Car crash with people</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Car crash with object</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Car crash with train</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Motorcycle crash</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td>Other traffic accident</td>
+                    <td>Traffic</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Vandalism</td>
+                    <td>Vandalizing glass</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td>Vandalizing door</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td>Other vandalism</td>
+                    <td>Violence</td>
+                </tr>
+                <tr>
+                    <td rowspan="20">Non-human-related</td>
+                    <td rowspan="5">Explosion</td>
+                    <td>Street explosion</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Firework explosion</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Factory explosion</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Indoor explosion</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Other explosion</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Fire</td>
+                    <td>Smoke</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Factory fire</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Building on fire</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Bush fire</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Other fire</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td rowspan="6">Object Falling</td>
+                    <td>Strong wind</td>
+                    <td>Natural hazard</td>
+                </tr>
+                <tr>
+                    <td>Object falling in home</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Tree falling</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Large objects falling</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Glass falling</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Other objects falling</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Water Incident</td>
+                    <td>Flood</td>
+                    <td>Natural hazard</td>
+                </tr>
+                <tr>
+                    <td>Water leakage</td>
+                    <td>Emergency</td>
+                </tr>
+                <tr>
+                    <td>Heavy rain</td>
+                    <td>Natural hazard</td>
+                </tr>
+                <tr>
+                    <td>Other water incidents</td>
+                    <td>Emergency</td>
+                </tr>
+            </tbody>
+        </table>
+    </details>
+
+    <br>
+
+    <details>
+        <summary><b>Click</b> to view some graphical statistics of our MSAD dataset.</summary>
+        <table align="center" width="850px">
+        <tr>
+            <td width="280px">
+                <center>
+                    <a href="./resources/images/video_distribution_pie_chart.png"><img class="rounded" src="./resources/images/video_distribution_pie_chart.png" width="280px"></a><br>
+                </center>
+            </td>
+
+            <td width="280px">
+                <center>
+                    <a href="./resources/images/frame_distribution.png"><img class="rounded" src="./resources/images/frame_distribution.png" width="280px"></a><br>
+                </center>
+            </td>
+
+            <td width="280px">
+                <center>
+                    <a href="./resources/images/test_train_video_number_distribution.png"><img class="rounded" src="./resources/images/test_train_video_number_distribution.png" width="280px"></a><br>
+                </center>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <center>
+                    <span style="font-size:14px">
+                        <i><b>The statistics of MSAD dataset include</b>: (left) a breakdown of main anomaly types and their respective percentages, 
+                            (middle) a boxplot illustrating frame number variations across scenarios in MSAD training set, and 
+                            (right) the distributions of train/test splits across scenarios.</i></span>
+                </center>
+            </td>
+        </tr>
+    </table>
+    </details>
+
+    <br>
+    <br>
+
     <hr>
     <table align="center" width="720px">
         <center><h1>Dataset Evaluation</h1></center>
@@ -621,7 +675,6 @@
             </td>
         </tr>
     </table>
-
     <table align="center" width="720px">
         <tr>
             <td>
@@ -688,13 +741,23 @@
         <tr>
             <td width="300px">
                 <center>
-                    <span style="font-size:24px">v1.0</span><br>
-                    <br>
-                    <img class="rounded" onmouseover="this.src='./resources/images/dataset_icon.jpg';" onmouseout="this.src='./resources/images/dataset_icon.jpg';" src="./resources/images/dataset_icon.jpg" height="150px"><br><br>
-                    <span style="font-size:16px"><a href="https://drive.google.com/drive/folders/1mxFGCcAuEecN0c7MHD12wD4pO2Ej5kLe?usp=sharing">MSAD Dataset</a></span><br>
+                        <span style="font-size:24px">v1.0</span><br><br>
+                        <a href="https://forms.microsoft.com/r/sGD0am1DKr">
+                        <img class="rounded" onmouseover="this.src='./resources/images/dataset_samples.png';" onmouseout="this.src='./resources/images/dataset_samples.png';" src="./resources/images/dataset_samples.png" height="30px">
+                        <br><br>
+                        <span style="font-size:16px">MSAD Dataset</span>
+                        <br>
+                    </a>
                 </center>
             </td>
         </tr>
+        <tr>
+            <p align = "center">
+                Please read the <a href="./agreement.html">terms and conditions here</a> and complete the below linked request form. Upon review, you will be notified the outcome of your
+                request via the provided email.
+            </p>
+        </tr>
+
     </table>
     <br><br>
     <hr>
