@@ -193,9 +193,7 @@
         </tr>
         <tr>
             <td width="400px">
-                <center>
-                    <span style="font-size:14px"><i><b>Overview:</b> Our MSAD includes a diverse range of scenarios, both indoor and outdoor, featuring various objects, e.g., pedestrians, cars, trains, etc. The first row shows different real-world common motions, while the second row demonstrates variations in weather and lighting conditions. The third row displays different moving objects. The last column shows human- and non-human-related anomalies.</i></span>
-                </center>
+                    <span style="font-size:14px"><i><b>Overview:</b> Our MSAD includes a diverse range of scenarios, both indoor and outdoor, featuring various objects, e.g., pedestrians, cars, trains, etc. The first row shows different real-world common motions, while the second row demonstrates variations in weather and lighting conditions. The third row displays different moving objects. The last column shows human- and non-human-related anomalies.</i></span> 
             </td>
         </tr>
     </table>
@@ -211,13 +209,13 @@
             <td width="300px">
                 <center>
                     <a href="#Download"><img class="rounded" onmouseover="this.src='./resources/images/data_icon.png';" onmouseout="this.src='./resources/images/data_icon.png';" src="./resources/images/data_icon.png" height="120px"></a><br>
-                    <span style="font-size:16px">MSAD Dataset</span><br>
+                    <span style="font-size:16px">Dataset</span><br>
                 </center>
             </td>
             <td width="300px">
                 <center>
-                    <a href="#"><img class="rounded" onmouseover="this.src='./resources/images/code_icon.png';" onmouseout="this.src='./resources/images/code_icon.png';" src="./resources/images/code_icon.png" height="120px"></a><br>
-                    <span style="font-size:16px">Code (Coming soon)</span><br>
+                    <a href="#Code"><img class="rounded" onmouseover="this.src='./resources/images/code_icon.png';" onmouseout="this.src='./resources/images/code_icon.png';" src="./resources/images/code_icon.png" height="120px"></a><br>
+                    <span style="font-size:16px">Code</span><br>
                 </center>
             </td>
         </tr>
@@ -225,16 +223,14 @@
     <br><br>
     <hr>
     <table align="center" width="720px">
-        <center><h1 id="Abstract">Dataset Abstract</h1></center>
+        <center><h1 id="Abstract">Abstract</h1></center>
     </table>
-    <center>
         <span>
-            We introduce a new dataset, Multi-Scenario Anomaly Detection (MSAD), comprising 14 distinct scenarios captured from various camera views. Our dataset has diverse motion patterns and challenging variations, such as different lighting and weather conditions, providing a robust foundation for training superior models. We conduct an in-depth analysis of recent representative models using MSAD and highlight its potential in addressing the challenges of detecting anomalies across diverse and evolving surveillance scenarios.</span>
-    </center>
+            We introduce a new dataset, Multi-Scenario Anomaly Detection (MSAD), comprising 14 distinct scenarios captured from various camera views. Our dataset has diverse motion patterns and challenging variations, such as different lighting and weather conditions, providing a robust foundation for training superior models. We conduct an in-depth analysis of recent representative models using MSAD and highlight its potential in addressing the challenges of detecting anomalies across diverse and evolving surveillance scenarios.</span> 
     <br><br>
     <hr>
 
-    <center><h1 id="Dataset-Overview">Dataset Overview</h1></center>
+    <center><h1 id="Dataset-Overview">Overview</h1></center>
 
     <div class="container">
         <div class="box">
@@ -551,12 +547,10 @@
 
         <tr>
             <td colspan="3">
-                <center>
                     <span style="font-size:14px">
                         <i><b>The statistics of MSAD dataset include</b>: (left) a breakdown of main anomaly types and their respective percentages, 
                             (middle) a boxplot illustrating frame number variations across scenarios in MSAD training set, and 
                             (right) the distributions of train/test splits across scenarios.</i></span>
-                </center>
             </td>
         </tr>
     </table>
@@ -567,18 +561,16 @@
 
     <hr>
     <table align="center" width="720px">
-        <center><h1 id="Dataset-Evaluation">Dataset Evaluation</h1></center>
+        <center><h1 id="Dataset-Evaluation">Evaluation</h1></center>
         <tr>
             <td>
                 <p>
-                    <center>
                     Based on the experimental results, we can deduce that a model trained on intricate real-world scenarios exhibits superior generalization.
                     This stems from the fact that real-world models are frequently influenced by the surrounding environ
                    ment, encompassing elements like fluctuating traffic patterns, dynamic electronic displays, and the
                     movement of trees in the wind. The model must discern the nuances of anomaly detection within a
                     dynamic environment and comprehend the dynamics of objects and/or performing subjects within it.
                     <b>MSAD dataset provides a comprehensive representation of real-world scenarios.</b> 
-                </center>
                 </p>
             </td>
         </tr>
@@ -586,173 +578,466 @@
     <table align="center" width="720px">
         <tr>
             <td>
-                <h2><center>Generalizability and adaptability</center></h2>
+                <h2><center>Performance evaluations by anomaly type</center></h2>
                 <table align="center" border="1" cellpadding="5">
-                    <tr>
-                        <th>Test view</th>
-                        <th>Train</th>
-                        <th colspan="2">FSAD</th>
-                        <th>Train</th>
-                        <th colspan="2">FSAD</th>
-                        <th colspan="2">SA<sup>2</sup>D (ours)</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>Micro</th>
-                        <th>Macro</th>
-                        <th></th>
-                        <th>Micro</th>
-                        <th>Macro</th>
-                        <th>Micro</th>
-                        <th>Macro</th>
-                    </tr>
-                    <tr>
-                        <td>ShT-v1</td>
-                        <td>ShT (7 views)</td>
-                        <td>61.36</td>
-                        <td>55.34</td>
-                        <td>MSAD</td>
-                        <td>63.74</td>
-                        <td>62.92</td>
-                        <td>68.96</td>
-                        <td>77.89</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v3</td>
-                        <td>ShT (7 views)</td>
-                        <td>26.51</td>
-                        <td>26.58</td>
-                        <td>MSAD</td>
-                        <td>64.39</td>
-                        <td>62.56</td>
-                        <td>67.59</td>
-                        <td>73.43</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v5</td>
-                        <td>ShT (7 views)</td>
-                        <td>53.40</td>
-                        <td>53.32</td>
-                        <td>MSAD</td>
-                        <td>55.04</td>
-                        <td>54.63</td>
-                        <td>55.74</td>
-                        <td>54.02</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v6</td>
-                        <td>ShT (7 views)</td>
-                        <td>78.36</td>
-                        <td>78.27</td>
-                        <td>MSAD</td>
-                        <td>70.26</td>
-                        <td>71.02</td>
-                        <td>75.47</td>
-                        <td>72.35</td>
-                    </tr>
-                    <tr>
-                        <td>ShT-v8</td>
-                        <td>ShT (7 views)</td>
-                        <td>50.02</td>
-                        <td>52.54</td>
-                        <td>MSAD</td>
-                        <td>59.97</td>
-                        <td>57.45</td>
-                        <td>60.85</td>
-                        <td>61.52</td>
-                    </tr>
-                </table>
+    <tr>
+        <th rowspan="2">Training set</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Assault</th>
+        <th colspan="2">Explosion</th>
+        <th colspan="2">Fighting</th>
+        <th colspan="2">Fire</th>
+    </tr>
+    <tr>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+    </tr>
+    <!-- First Section -->
+    <tr>
+        <td rowspan="3">UCF-Crime</td>
+        <td>RTFM</td>
+        <td>60.6</td><td>62.2</td>
+        <td>69.3</td><td>79.0</td>
+        <td>68.5</td><td>70.6</td>
+        <td>56.7</td><td>68.7</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>60.5</td><td>62.0</td>
+        <td>65.9</td><td>74.3</td>
+        <td>63.9</td><td>61.6</td>
+        <td>51.5</td><td>55.0</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td class="highlighted">72.9</td><td class="highlighted">75.6</td>
+        <td class="highlighted">85.0</td><td class="highlighted">89.4</td>
+        <td class="highlighted">83.0</td><td class="highlighted">83.0</td>
+        <td class="highlighted">61.2</td><td class="highlighted">72.9</td>
+    </tr>
+    <tr>
+        <td rowspan="3">MSAD</td>
+        <td>RTFM</td>
+        <td>68.1</td><td>67.3</td>
+        <td>84.6</td><td>89.9</td>
+        <td>93.0</td><td>93.0</td>
+        <td>61.3</td><td>81.2</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>65.5</td><td>64.5</td>
+        <td>77.3</td><td>83.3</td>
+        <td>90.4</td><td>81.6</td>
+        <td>61.2</td><td>82.9</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td>56.9</td><td>64.5</td>
+        <td>67.9</td><td>85.3</td>
+        <td>83.3</td><td>90.4</td>
+        <td>61.2</td><td>82.9</td>
+    </tr>
+
+    <!-- Second Section Header -->
+    <tr>
+        <th rowspan="2">Training set</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Object Falling</th>
+        <th colspan="2">People Falling</th>
+        <th colspan="2">Robbery</th>
+        <th colspan="2">Shooting</th>
+    </tr>
+    <tr>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+    </tr>
+    <tr>
+        <td rowspan="3">UCF-Crime</td>
+        <td>RTFM</td>
+        <td>85.0</td><td>88.8</td>
+        <td>65.1</td><td>60.9</td>
+        <td>59.7</td><td>65.7</td>
+        <td>58.5</td><td>64.5</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>65.5</td><td>73.1</td>
+        <td>57.5</td><td>53.6</td>
+        <td>67.2</td><td>58.1</td>
+        <td>56.2</td><td>58.4</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td class="highlighted">74.1</td><td class="highlighted">75.5</td>
+        <td class="highlighted">92.4</td><td class="highlighted">75.3</td>
+        <td class="highlighted">77.6</td><td class="highlighted">71.5</td>
+        <td class="highlighted">73.5</td><td class="highlighted">72.4</td>
+    </tr>
+    <tr>
+        <td rowspan="3">MSAD</td>
+        <td>RTFM</td>
+        <td>94.7</td><td>96.7</td>
+        <td>56.5</td><td>59.6</td>
+        <td>79.3</td><td>86.6</td>
+        <td>87.1</td><td>88.3</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>90.9</td><td>94.8</td>
+        <td>42.5</td><td>43.7</td>
+        <td>66.3</td><td>67.3</td>
+        <td>81.8</td><td>83.1</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td>92.1</td><td>95.8</td>
+        <td class="highlighted">42.5</td><td class="highlighted">43.7</td>
+        <td class="highlighted">87.3</td><td class="highlighted">84.1</td>
+        <td class="highlighted">84.4</td><td class="highlighted">87.8</td>
+    </tr>
+
+    <!-- Third Section Header -->
+    <tr>
+        <th rowspan="2">Training set</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Traffic Accident</th>
+        <th colspan="2">Vandalism</th>
+        <th colspan="2">Water Incident</th>
+        <th colspan="2">Overall</th>
+    </tr>
+    <tr>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+    </tr>
+    <tr>
+        <td rowspan="3">UCF-Crime</td>
+        <td>RTFM</td>
+        <td>55.6</td><td>45.1</td>
+        <td>86.4</td><td>85.2</td>
+        <td>93.5</td><td>98.5</td>
+        <td>71.9</td><td>47.4</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>51.7</td><td>46.0</td>
+        <td>88.1</td><td>86.7</td>
+        <td>94.2</td><td>96.5</td>
+        <td>68.1</td><td>46.7</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td>53.0</td><td>47.9</td>
+        <td class="highlighted">91.0</td><td class="highlighted">88.7</td>
+        <td class="highlighted">96.7</td><td class="highlighted">98.5</td>
+        <td class="highlighted">72.6</td><td class="highlighted">49.8</td>
+    </tr>
+    <tr>
+        <td rowspan="3">MSAD</td>
+        <td>RTFM</td>
+        <td>63.2</td><td>51.8</td>
+        <td>85.2</td><td>80.1</td>
+        <td>96.5</td><td>98.6</td>
+        <td>66.3</td><td>64.3</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>62.6</td><td>54.5</td>
+        <td>82.4</td><td>80.1</td>
+        <td>85.9</td><td>95.9</td>
+        <td>69.5</td><td>68.3</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td class="highlighted">62.0</td><td class="highlighted">56.4</td>
+        <td>77.0</td><td>88.5</td>
+        <td>93.2</td><td>95.5</td>
+        <td>80.5</td><td class="highlighted">68.3</td>
+    </tr>
+</table>
             </td>
         </tr>
         <tr>
             <td width="400px">
-                <center>
-                    <span style="font-size:14px"><i><b>Experimental results on single-scenario evaluations.</b> On ShanghaiTech (ShT), only 7
-                         views are used during training and the rest views are individually used for testing. The notation ShT-v∗ denotes the
-                         use of different camera views.</i></span>
-                </center>
+                    <span style="font-size:14px"><i><b>Performance evaluations by anomaly type (a total of 11 main anomaly types) on our MSAD test set are conducted.</b>
+        We use frame-level Micro AUC (%) and Average Precision (AP, in %) as evaluation metrics for models pretrained on
+        either UCF-Crime or our MSAD. We use I3D as the backbone for all methods. The best training scheme for each method
+        is highlighted in bold.</i></span>
             </td>
         </tr>
     </table>
     <table align="center" width="720px">
         <tr>
             <td>
-                <h2> <center> Cross-scenario evaluation </center></h2>
+                <h2> <center> Performance evaluations by scenario </center></h2>
                 <table align="center" border="1" cellpadding="5">
-                    <tr>
-                        <th>Train</th>
-                        <th>Test</th>
-                        <th>Micro</th>
-                        <th>Macro</th>
-                    </tr>
-                    <tr>
-                        <td>ShT</td>
-                        <td>UCSD Ped2</td>
-                        <td>57.38</td>
-                        <td>58.36</td>
-                    </tr>
-                    <tr>
-                        <td>ShT</td>
-                        <td>CUHK Avenue</td>
-                        <td>69.98</td>
-                        <td>78.32</td>
-                    </tr>
-                    <tr>
-                        <td>ShT</td>
-                        <td>MSAD</td>
-                        <td>63.92</td>
-                        <td>64.92</td>
-                    </tr>
-                    <tr>
-                        <td>MSAD</td>
-                        <td>UCSD Ped2</td>
-                        <td>70.35</td>
-                        <td>65.74</td>
-                    </tr>
-                    <tr>
-                        <td>MSAD</td>
-                        <td>CUHK Avenue</td>
-                        <td>79.57</td>
-                        <td>84.49</td>
-                    </tr>
-                    <tr>
-                        <td>MSAD</td>
-                        <td>MSAD</td>
-                        <td>69.96</td>
-                        <td>69.60</td>
-                    </tr>
-                </table>
+    <tr>
+        <th rowspan="2">Training set</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Frontdoor</th>
+        <th colspan="2">Highway</th>
+        <th colspan="2">Mall</th>
+        <th colspan="2">Office</th>
+    </tr>
+    <tr>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+    </tr>
+    <!-- First Section -->
+    <tr>
+        <td rowspan="3">UCF-Crime</td>
+        <td>RTFM</td>
+        <td>80.8</td><td>80.1</td>
+        <td>37.1</td><td>14.4</td>
+        <td>86.0</td><td>87.1</td>
+        <td>68.5</td><td>63.2</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>68.4</td><td>70.2</td>
+        <td>36.3</td><td>13.4</td>
+        <td>79.6</td><td>80.4</td>
+        <td>64.5</td><td>60.2</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td>84.7</td><td>82.6</td>
+        <td>18.9</td><td>1.1</td>
+        <td>83.1</td><td>80.6</td>
+        <td>66.6</td><td>57.6</td>
+    </tr>
+    <tr>
+        <td rowspan="3">MSAD</td>
+        <td>RTFM</td>
+        <td>84.1</td><td>81.1</td>
+        <td>63.7</td><td>4.1</td>
+        <td>87.2</td><td>72.2</td>
+        <td>78.1</td><td>68.8</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>86.4</td><td>85.1</td>
+        <td>79.7</td><td>4.1</td>
+        <td>65.3</td><td>56.6</td>
+        <td>75.1</td><td>62.4</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td class="highlighted">84.8</td><td class="highlighted">82.8</td>
+        <td class="highlighted">31.5</td><td class="highlighted">1.3</td>
+        <td class="highlighted">91.0</td><td class="highlighted">83.8</td>
+        <td class="highlighted">77.8</td><td class="highlighted">67.3</td>
+    </tr>
+
+    <!-- Second Section Header -->
+    <tr>
+        <th rowspan="2">Training set</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Park</th>
+        <th colspan="2">Parkinglot</th>
+        <th colspan="2">Pedestrian st.</th>
+        <th colspan="2">Restaurant</th>
+    </tr>
+    <tr>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+    </tr>
+    <tr>
+        <td rowspan="3">UCF-Crime</td>
+        <td>RTFM</td>
+        <td>75.3</td><td>23.7</td>
+        <td>66.7</td><td>16.7</td>
+        <td>84.1</td><td>67.6</td>
+        <td>66.5</td><td>56.5</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>55.3</td><td>7.9</td>
+        <td>59.5</td><td>12.3</td>
+        <td>74.4</td><td>11.2</td>
+        <td>47.3</td><td>32.4</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td>91.6</td><td>34.8</td>
+        <td>62.2</td><td>17.6</td>
+        <td>58.5</td><td>6.1</td>
+        <td>75.7</td><td>74.4</td>
+    </tr>
+    <tr>
+        <td rowspan="3">MSAD</td>
+        <td>RTFM</td>
+        <td>69.0</td><td>25.6</td>
+        <td>74.4</td><td>35.9</td>
+        <td>97.4</td><td>50.6</td>
+        <td>96.1</td><td>91.9</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>77.9</td><td>38.3</td>
+        <td>68.1</td><td>14.5</td>
+        <td>80.4</td><td>95.8</td>
+        <td>91.8</td><td>98.1</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td class="highlighted">87.8</td><td class="highlighted">36.2</td>
+        <td class="highlighted">91.4</td><td class="highlighted">53.9</td>
+        <td class="highlighted">81.9</td><td class="highlighted">11.5</td>
+        <td class="highlighted">93.1</td><td class="highlighted">87.4</td>
+    </tr>
+
+    <!-- Third Section Header -->
+    <tr>
+        <th rowspan="2">Training set</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Road</th>
+        <th colspan="2">Shop</th>
+        <th colspan="2">Sidewalk</th>
+        <th colspan="2">Street highview</th>
+    </tr>
+    <tr>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+    </tr>
+    <tr>
+        <td rowspan="3">UCF-Crime</td>
+        <td>RTFM</td>
+        <td>82.9</td><td>47.1</td>
+        <td>85.1</td><td>68.5</td>
+        <td>89.1</td><td>66.1</td>
+        <td>82.6</td><td>35.9</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>54.4</td><td>18.3</td>
+        <td>69.4</td><td>60.4</td>
+        <td>47.4</td><td>26.4</td>
+        <td>37.2</td><td>8.3</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td>49.5</td><td>26.6</td>
+        <td>78.8</td><td>66.5</td>
+        <td>68.0</td><td>55.9</td>
+        <td>62.0</td><td>23.0</td>
+    </tr>
+    <tr>
+        <td rowspan="3">MSAD</td>
+        <td>RTFM</td>
+        <td>54.0</td><td>16.8</td>
+        <td>80.6</td><td>77.3</td>
+        <td>52.5</td><td>17.1</td>
+        <td>43.3</td><td>12.3</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>77.9</td><td>49.7</td>
+        <td>84.9</td><td>77.2</td>
+        <td>85.5</td><td>62.3</td>
+        <td>87.6</td><td>40.7</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td class="highlighted">83.0</td><td class="highlighted">64.4</td>
+        <td class="highlighted">81.3</td><td class="highlighted">64.5</td>
+        <td>86.5</td><td class="highlighted">85.1</td>
+        <td>85.0</td><td>37.7</td>
+    </tr>
+
+    <!-- Fourth Section Header -->
+    <tr>
+        <th rowspan="2">Training set</th>
+        <th rowspan="2">Method</th>
+        <th colspan="2">Train</th>
+        <th colspan="2">Warehouse</th>
+        <th colspan="2">Overall</th>
+    </tr>
+    <tr>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+        <th>AUC</th><th>AP</th>
+    </tr>
+    <tr>
+        <td rowspan="3">UCF-Crime</td>
+        <td>RTFM</td>
+        <td>52.2</td><td>5.0</td>
+        <td>82.3</td><td>52.8</td>
+        <td>71.9</td><td>47.4</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>39.8</td><td>2.1</td>
+        <td>55.4</td><td>18.3</td>
+        <td>61.8</td><td>31.2</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td>51.3</td><td>2.6</td>
+        <td>86.9</td><td>54.0</td>
+        <td>73.4</td><td>53.4</td>
+    </tr>
+    <tr>
+        <td rowspan="3">MSAD</td>
+        <td>RTFM</td>
+        <td>66.9</td><td>3.9</td>
+        <td>69.5</td><td>37.4</td>
+        <td>86.7</td><td>66.3</td>
+    </tr>
+    <tr>
+        <td>MGFN</td>
+        <td>53.0</td><td>3.1</td>
+        <td>72.3</td><td>30.9</td>
+        <td>85.0</td><td>63.5</td>
+    </tr>
+    <tr>
+        <td>UR-DMU</td>
+        <td class="highlighted">59.0</td><td class="highlighted">3.1</td>
+        <td class="highlighted">81.2</td><td class="highlighted">59.1</td>
+        <td class="highlighted">85.0</td><td class="highlighted">68.3</td>
+    </tr>
+</table>
             </td>
         </tr>
         <tr>
             <td width="400px">
-                <center>
-                    <span style="font-size:14px"><i> <b> Evaluations on cross-scenario setups. </b> We use FSAD and SA2D
-                        (ours) for training on ShanghaiTech (ShT) and MSAD, respectively.</i></span>
-                </center>
+                    <span style="font-size:14px"><i> <b>Performance evaluations by scenario (a total of 14 scenarios) on our MSAD test set are conducted.</b> 
+        We use frame-level Micro AUC (%) and Average Precision (AP, in %) as evaluation metrics for models pretrained on
+        either UCF-Crime or our MSAD. We use I3D as the backbone for all methods. The best training scheme for each method
+        is highlighted in bold.</i></span>
             </td>
         </tr>
     </table>
     <br><br>
     <hr>
     <table align="center" width="720px">
-        <center><h1 id="Download">Download</h1></center>
+        <center><h1 id="Download">Dataset</h1></center>
         <tr>
             <td width="300px">
                 <center>
                         <span style="font-size:24px">v1.0</span><br><br>
                         <a href="https://forms.microsoft.com/r/sGD0am1DKr">
-                        <img class="rounded" onmouseover="this.src='./resources/images/dataset_samples.png';" onmouseout="this.src='./resources/images/dataset_samples.png';" src="./resources/images/dataset_samples.png" height="30px">
+                        <img class="rounded" onmouseover="this.src='./resources/images/dataset_samples.png';" onmouseout="this.src='./resources/images/dataset_samples.png';" src="./resources/images/dataset_samples.png" height="50px">
                         <br><br>
-                        <span style="font-size:16px">MSAD Dataset</span>
+                        <span style="font-size:16px">MSAD Dataset Download Request Link</span>
                         <br>
                     </a>
                 </center>
             </td>
         </tr>
         <tr>
-            <p align = "center">
+            <p>
                 Please read the <a href="./agreement.html">terms and conditions here</a> and complete the below linked request form. Upon review, you will be notified the outcome of your
                 request via the provided email.
             </p>
@@ -767,13 +1052,34 @@
             
             <td align="center"><a href="https://arxiv.org/abs/2402.04857"><img class="layered-paper-big" style="height:160px" src="./resources/images/paper_pdf_thumb.png"/></a></td>
             
-            <td width="200px"><a href="https://arxiv.org/abs/2402.04857"><span style="font-size:14pt"><br>Advancing Video Anomaly Detection: A Concise Review and a New Dataset<br></span></a></td>
+            <td width="200px"><a href="https://arxiv.org/abs/2402.04857"><span style="font-size:12pt"><br>Advancing Video Anomaly Detection: A Concise Review and a New Dataset<br></span></a></td>
             
         </tr>
     </table>
     <br><br>
+      </table>
+    <br><br>
     <hr>
-    <table align="center" width="750px">
+    <table align="center" width="720px">
+        <center><h1 id="Paper">Code</h1></center>
+        <tr>
+            <td width="200px"><a href="https://github.com/Tom-roujiang/MSAD"><span style="font-size:12pt"><br>Code / Evaluation framework<br></span></a></td>        
+        </tr>
+    </table>
+    <br><br>
+    <hr>
+    
+    <table align="center" width="720px">
+        <center><h1 id="Paper">Acknowledgments</h1></center>
+        <tr>
+        <span>Liyun Zhu conducted this research under the supervision of Lei Wang for his final year master's research project at ANU. Liyun Zhu and Arjun Raj are recipients of The Active Intelligence Research Challenge Award. 
+This work was also supported by the NCI Adapter Scheme Q4 2023 and the NCI National AI Flagship Merit Allocation Scheme, with computational resources provided by NCI Australia, an NCRIS-enabled capability supported by the Australian Government.
+    </span>
+    </tr>
+    </table>
+    <br><br>
+    <hr>
+    <table align="center" width="720px">
         <center><h1 id="Cite">Cite</h1></center>
         <div class="disclaimerbox">
             <span>
@@ -787,23 +1093,6 @@
                 </pre>
             </span>
         </div>
-    </table>
-    <br><br>
-    <hr>
-    <table align="center" width="720px">
-        <center><h1 id="Contact">Contact</h1></center>
-        <tr>
-            <p align="center">Please contact the following people for any enquires related to the dataset or the paper.</p>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Liyun Zhu: <a href="mailto:liyun.zhu@anu.edu.au">liyun.zhu@anu.edu.au</a></li>
-                    <li>Lei Wang: <a href="mailto:lei.w@anu.edu.au">lei.w@anu.edu.au</a></li>
-                    <li>Arjun Raj: <a href="mailto:u7526852@anu.edu.au">u7526852@anu.edu.au</a></li>
-                </ul>
-            </td>
-        </tr>
     </table>
     <br><br>
 </body>
